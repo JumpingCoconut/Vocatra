@@ -1,4 +1,4 @@
-package de.chandelier.vocatra.ui.views;
+package de.chandelier.vocatra;
 
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
