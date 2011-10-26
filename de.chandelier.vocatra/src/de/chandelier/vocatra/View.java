@@ -1,5 +1,7 @@
 package de.chandelier.vocatra;
 
+import java.io.File;
+
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
 import org.eclipse.jface.viewers.ITableLabelProvider;
@@ -10,6 +12,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.ExpandBar;
 import org.eclipse.swt.widgets.ExpandItem;
 import org.eclipse.ui.ISharedImages;
@@ -36,7 +39,12 @@ public class View extends ViewPart {
 		viewer.setLabelProvider(new LabelProvider());
 		viewer.setInput(new String[]{"Vokabeln Lektion 1","Vokabeln Lektion 2","Vokabeln Lektion 3"});
 		vocabularyItem.setHeight(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT).y);
+		Image vocImage =  new Image(Display.getDefault(),"D:/Entwicklung/DefaultGit/Vocatra/de.chandelier.vocatra/resources/vocabulary48px.png");
+		
+		vocabularyItem.setImage(vocImage);
 		vocabularyItem.setControl(composite);
+		
+		
 		
 		Composite grammarComposite = new Composite(expandBar, SWT.BORDER);
 		grammarComposite.setLayout(new FillLayout());
@@ -47,6 +55,8 @@ public class View extends ViewPart {
 		ExpandItem grammarItem = new ExpandItem(expandBar, SWT.NONE);
 		grammarItem.setText("Grammar");
 		grammarItem.setHeight(grammarComposite.computeSize(SWT.DEFAULT, SWT.DEFAULT).y);
+		Image grammarImage =  new Image(Display.getDefault(),"/resources/grammar48px.png");
+		grammarItem.setImage(grammarImage);
 		grammarItem.setControl(grammarComposite);
 		
 	}
