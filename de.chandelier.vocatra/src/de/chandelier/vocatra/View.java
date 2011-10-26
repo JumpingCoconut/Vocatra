@@ -55,7 +55,7 @@ public class View extends ViewPart {
 		ExpandItem grammarItem = new ExpandItem(expandBar, SWT.NONE);
 		grammarItem.setText("Grammar");
 		grammarItem.setHeight(grammarComposite.computeSize(SWT.DEFAULT, SWT.DEFAULT).y);
-		Image grammarImage =  new Image(Display.getDefault(),"/resources/grammar48px.png");
+		Image grammarImage =  new Image(Display.getDefault(),"D:/Entwicklung/DefaultGit/Vocatra/de.chandelier.vocatra/resources/grammar48px.png");
 		grammarItem.setImage(grammarImage);
 		grammarItem.setControl(grammarComposite);
 		
