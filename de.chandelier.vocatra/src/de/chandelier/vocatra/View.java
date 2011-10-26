@@ -51,7 +51,7 @@ public class View extends ViewPart {
 		TableViewer gramarViewer = new TableViewer(grammarComposite);
 		gramarViewer.setContentProvider(new ArrayContentProvider());
 		gramarViewer.setLabelProvider(new LabelProvider());
-		gramarViewer.setInput(new String[]{"Grammatik Lektion 1","Grammatik Lektion 2","Grammatik Lektion 3"});
+		gramarViewer.setInput(new String[]{"Grammatik Lektion 1","Grammatik Lektion 2","Grammatik Lektion 4"});
 		ExpandItem grammarItem = new ExpandItem(expandBar, SWT.NONE);
 		grammarItem.setText("Grammar");
 		grammarItem.setHeight(grammarComposite.computeSize(SWT.DEFAULT, SWT.DEFAULT).y);
